@@ -1,15 +1,11 @@
 import { StyleSheet } from "react-native";
 
-export const styles = StyleSheet.create({
+export const style = StyleSheet.create({
     container: {
         flex: 1,
         width: "100%",
-        backgroundColor: '#1D5C63'
-    },
-    containerHeader: {
-        marginTop: '14%',
-        marginBottom: '8%',
-        paddingStart: '5%'
+        backgroundColor: '#1D5C63',
+        padding: 15
     },
     message: {
         fontSize: 28,

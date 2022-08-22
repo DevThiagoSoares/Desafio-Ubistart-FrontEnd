@@ -6,7 +6,7 @@ import { TaskScroll } from '../../components/Task';
 
 
 
-export function Task() {
+export function Task(props: any) {
     const [task, setTask] = useState<string[]>([]);
     const [taskTitle, setTaskTitle] = useState("");
 
@@ -35,7 +35,7 @@ export function Task() {
             }
         ])
     }
-
+    console.log(props)
     return (
         <View style={styles.container}>
             <Text style={styles.eventName}>

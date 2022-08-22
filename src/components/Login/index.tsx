@@ -4,13 +4,19 @@ import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 
 import * as Animatable from 'react-native-animatable';
-import { useNavigation } from '@react-navigation/native';
 
-export default function Login() {
+export default function Login(props: any) {
+    console.log(props)
     return (
         <View style={styles.container}>
             <Animatable.View animation='fadeInLeft' delay={500} style={styles.containerHeader}>
                 <Text style={styles.message}>Bem vindo(a)</Text>
+                <Animatable.Image
+                    animation='flipInY'
+                    source={require('../../../assets/logo-ubistart.png.webp')}
+                    style={{ width: '80%' }}
+                    resizeMode='contain'
+                />
             </Animatable.View>
 
             <Animatable.View style={styles.containerForm}>
@@ -27,11 +33,11 @@ export default function Login() {
                     style={styles.input}
                 />
 
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={()=>props.navigation.navigate('Task')}>
                     <Text style={styles.buttonText}> Entrar </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.buttonCadastro}>
+                <TouchableOpacity style={styles.buttonCadastro} onPress={() => props.navigation.navigate('Register') }>
                     <Text style={styles.buttonTextCadastro}> Cadastre-se ! </Text>
                 </TouchableOpacity>
 
