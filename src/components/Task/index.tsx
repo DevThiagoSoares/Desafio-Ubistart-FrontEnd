@@ -21,3 +21,5 @@ export function TaskScroll({ taskTitle, onRemove }: Props) {
         </View>
     )
 }
+
+// correção
